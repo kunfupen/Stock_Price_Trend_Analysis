@@ -3,7 +3,7 @@
 ## Overview
 This project analyzes historical stock price data to identify trends and patterns. It utilizes various statistical methods and visualization techniques to help investors make informed decisions.
 
-## Tabe of Contents
+## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
     - [Data Collection](#data-collection)
@@ -15,8 +15,14 @@ This project analyzes historical stock price data to identify trends and pattern
 - [Producing Analysis](#producing-analysis)
 
 ## Installation
-To install the required libraries for this project, run the following command in your terminal:
+1. Clone the repository:
+```bash
+git clone https://github.com/kunfupen/Stock-Price-Trend-Analysis.git
+cd Stock-Price-Trend-Analysis
 ```
+
+2. To install the required libraries for this project, run the following command in your terminal:
+```bash
 pip install -r requirements.txt
 ```
 
