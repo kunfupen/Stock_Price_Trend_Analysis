@@ -11,8 +11,8 @@ SECTORS = {
 
 BENCHMARK = "^GSPC"
 
-def load_cleaned_data(secotr, ticker):
-    filepath = f"data/processed/{secotr}/{ticker}_cleaned.csv"
+def load_cleaned_data(sector, ticker):
+    filepath = f"data/processed/{sector}/{ticker}_cleaned.csv"
     try:
         df = pd.read_csv(filepath, parse_dates=["Date"])
         return df
@@ -20,7 +20,7 @@ def load_cleaned_data(secotr, ticker):
         print(f"Error loading {ticker}: {e}")
         return None
     
-def closing_price_by_secotor_plot(all_data, benchmark_data):
+def closing_price_by_sector_plot(all_data, benchmark_data):
     for sector, tickers in SECTORS.items():
         fig, ax = plt.subplots(figsize=(12, 6))
 
@@ -168,7 +168,7 @@ def main():
             if df is not None:
                 all_data[ticker] = df
 
-    closing_price_by_secotor_plot(all_data, benchmark_data)
+    closing_price_by_sector_plot(all_data, benchmark_data)
     moving_average_plot(all_data)
     sector_returns_plot()
     plot_risk_return()
